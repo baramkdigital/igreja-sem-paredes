@@ -3,6 +3,7 @@ import { Heart, Users, Award, Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import { Lightbox } from "@/components/lightbox"
 import { ContactForm } from "@/components/contact-form"
+import { Instagram } from "lucide-react"
 
 export default function ChurchLandingPage() {
   return (
@@ -44,6 +45,10 @@ export default function ChurchLandingPage() {
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
+            <p className="text-cinza mb-6 leading-relaxed text-lg">
+                A Agência Missionária "Igreja Sem Paredes" nasceu do coração do Pr. Sérgio Santos, que há mais de 50 anos tem vivido e pregado o Evangelho.
+
+              </p>
               <p className="text-cinza mb-6 leading-relaxed text-lg">
                 Fundador e pastor presidente da Igreja do Nazareno no Paiol, em Nilópolis, ele teve a ideia do nome durante um dos evangelismos dos “Homens de Terno”. Projeto evangelístico que marca vidas com o anúncio de Jesus.
               </p>
@@ -76,44 +81,6 @@ export default function ChurchLandingPage() {
                 className="rounded-2xl shadow-2xl object-cover h-full"
               />
             </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-mostarda/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-8 h-8 text-mostarda" />
-                </div>
-                <h4 className="text-xl font-bold text-bordo mb-4">Amor e Acolhimento</h4>
-                <p className="text-cinza leading-relaxed">
-                  Um ambiente caloroso onde todos são bem-vindos, independente de sua origem ou situação
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-mostarda/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-mostarda" />
-                </div>
-                <h4 className="text-xl font-bold text-bordo mb-4">Comunidade Unida</h4>
-                <p className="text-cinza leading-relaxed">
-                  Relacionamentos genuínos e duradouros construídos na base do amor cristão
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-mostarda/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-8 h-8 text-mostarda" />
-                </div>
-                <h4 className="text-xl font-bold text-bordo mb-4">Compromisso com a Fé</h4>
-                <p className="text-cinza leading-relaxed">
-                  Dedicação total ao ensino bíblico e ao crescimento espiritual de cada membro
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -149,14 +116,40 @@ export default function ChurchLandingPage() {
             <h2 className="text-4xl font-bold text-bordo mb-6 font-poppins">Formulário de Contato</h2>
             <div className="w-24 h-1 bg-mostarda mx-auto mb-6"></div>
             <p className="text-lg text-cinza max-w-xl mx-auto font-inter">
-              Entre em contato conosco. Estamos aqui para ouvir você e ajudar no que for necessário.
+              Entre em contato conosco para agendar uma missão em sua cidade. 
             </p>
+            <div className="flex justify-center mt-4">
+              <a
+                href="https://www.instagram.com/pr.sergio.santos?igsh=MWM4c2F4ejVndjJ4NQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-bordo hover:text-mostarda transition-colors text-lg font-semibold"
+              >
+                <Instagram className="w-6 h-6" />
+                @pr.sergio.santos
+              </a>
+            </div>
           </div>
 
           <div className="max-w-2xl mx-auto">
             <ContactForm />
-
-            {/* Informações de contato compactas */}
+          {/* Área de doação via Pix */}
+          <div className="mt-12 flex flex-col items-center bg-mostarda/10 rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-bordo mb-4 font-poppins text-center">Seja um mantenedor desta obra:</h3>
+            <div className="mb-4">
+              <Image
+                src="/pix.jpeg"
+                alt="QR Code Pix para doações"
+                width={200}
+                height={200}
+                className="rounded-xl border-4 border-mostarda shadow-md"
+              />
+            </div>
+            <div className="text-center">
+              <span className="block text-lg font-semibold text-bordo mb-1">Chave Pix</span>
+              <span className="block text-lg font-mono text-cinza select-all">missaoonibus@gmail.com</span>
+            </div>
+          </div>
           </div>
         </div>
       </section>
