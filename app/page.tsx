@@ -12,26 +12,25 @@ export default function ChurchLandingPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920&text=Igreja+Background"
+            src="/WhatsApp Image 2025-07-17 at 13.04.41 (1).jpeg"
             alt="Igreja Background"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-bordo/50"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
         {/* Logo Central */}
         <div className="relative z-10 text-center px-4">
-          <div className="w-48 h-48 mx-auto bg-branco/95 backdrop-blur-sm rounded-full flex items-center justify-center mb-8 shadow-2xl">
-            <span className="text-bordo text-6xl font-bold">IE</span>
-          </div>
-          <h1 className="text-6xl md:text-8xl font-bold text-branco mb-6 drop-shadow-lg font-poppins">
-            Igreja Esperança
-          </h1>
-          <p className="text-xl md:text-2xl text-branco/90 max-w-3xl mx-auto leading-relaxed drop-shadow">
-            Bem-vindos à nossa casa de oração e comunhão
-          </p>
+          <Image
+            src="/logo-branco.png"
+            alt="Logo Igreja Esperança"
+            width={600}
+            height={400 }
+            className="object-contain mx-auto mb-8 drop-shadow-2xl"
+            priority
+          />
         </div>
       </section>
 
@@ -41,35 +40,40 @@ export default function ChurchLandingPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-bordo mb-6 font-poppins">Quem Somos</h2>
             <div className="w-24 h-1 bg-mostarda mx-auto mb-6"></div>
-            <p className="text-xl text-cinza max-w-3xl mx-auto leading-relaxed">
-              Somos uma comunidade de fé dedicada a servir a Deus e ao próximo, construindo relacionamentos genuínos e
-              transformando vidas através do amor de Cristo.
-            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
-              <h3 className="text-3xl font-bold text-bordo mb-6">Nossa História</h3>
               <p className="text-cinza mb-6 leading-relaxed text-lg">
-                Fundada com o propósito de ser um farol de esperança em nossa comunidade, a Igreja Esperança tem como
-                missão proclamar o evangelho de Jesus Cristo e discipular pessoas de todas as idades.
+                Fundador e pastor presidente da Igreja do Nazareno no Paiol, em Nilópolis, ele teve a ideia do nome durante um dos evangelismos dos “Homens de Terno”. Projeto evangelístico que marca vidas com o anúncio de Jesus.
               </p>
-              <p className="text-cinza leading-relaxed text-lg mb-8">
-                Acreditamos que cada pessoa é preciosa aos olhos de Deus e merece ser amada, acolhida e cuidada. Nossa
-                igreja é um lugar onde você pode crescer espiritualmente e encontrar sua família na fé.
+              <p className="text-cinza mb-6 leading-relaxed text-lg">
+                Hoje, a agência conta com uma equipe fixa de cerca de 20 pessoas, atuando com excelência nas áres de evangelismo, louvor, mídia, ministério com crianças e a infraestrutura. Todos com o mesmo propósito: alcançar vidas para Jesus.
+              </p>
+              <p className="text-cinza mb-6 leading-relaxed text-lg">
+                Em agosto de 2022, o pastor Sérgio gravou um vídeo compartilhando seu sonho de ter um ônibus missionário para pregar pelo Brasil. Meses depois, Deus respondeu de forma surpreendente: recebemos a doação de um caminhão. E é com ele que temos avançado, transformando praças em igrejas e comunidades inteiras em campos de salvação.
+              </p>
+              <p className="text-cinza mb-6 leading-relaxed text-lg">
+                Atuamos principalmente no interior do Rio de Janeiro, São Paulo e Espírito Santo. E com equipes menores, seguimos até para as nações.
+              </p>
+              <p className="text-cinza mb-6 leading-relaxed text-lg">
+                Mas seguimos crendo que o ônibus vai chegar!
+              </p>
+              <p className="text-cinza mb-6 leading-relaxed text-lg">
+                Nosso chamado é pregar Jesus e mobilizar a Igreja para a missão.<br/>
+                Se você não pode ir, você pode enviar. E se pode, oferte nessa obra e nos ajude a chegar ainda mais longe.
               </p>
               <p className="text-cinza leading-relaxed text-lg">
-                Ao longo dos anos, construímos uma reputação sólida baseada na confiança, amor e compromisso com a
-                palavra de Deus. Nosso objetivo é sempre servir com excelência e dedicação.
+                Somos uma Igreja sem Paredes. Nosso púlpito é a estrada.
               </p>
             </div>
-            <div>
+            <div className="h-full flex items-stretch">
               <Image
-                src="/placeholder.svg?height=500&width=600&text=Igreja+Interior"
-                alt="Interior da Igreja"
+                src="/482223225_1084941807003249_2448397229756764033_n.jpg"
+                alt="Equipe Igreja Sem Paredes"
                 width={600}
                 height={500}
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-2xl object-cover h-full"
               />
             </div>
           </div>
@@ -127,12 +131,12 @@ export default function ChurchLandingPage() {
 
           <Lightbox
             images={[
-              { src: "/placeholder.svg?height=400&width=600&text=Foto 1", alt: "Momento Especial 1" },
-              { src: "/placeholder.svg?height=400&width=600&text=Foto 2", alt: "Momento Especial 2" },
-              { src: "/placeholder.svg?height=400&width=600&text=Foto 3", alt: "Momento Especial 3" },
-              { src: "/placeholder.svg?height=400&width=600&text=Foto 4", alt: "Momento Especial 4" },
-              { src: "/placeholder.svg?height=400&width=600&text=Foto 5", alt: "Momento Especial 5" },
-              { src: "/placeholder.svg?height=400&width=600&text=Foto 6", alt: "Momento Especial 6" },
+              { src: "/434113580_821927373304695_6292671048646833916_n.jpg", alt: "Momento Especial 1" },
+              { src: "/482191509_1084940797003350_2074000240750414926_n.jpg", alt: "Momento Especial 2" },
+              { src: "/482223225_1084941807003249_2448397229756764033_n.jpg", alt: "Momento Especial 3" },
+              { src: "/482242073_1084941573669939_212178334042404608_n.jpg", alt: "Momento Especial 4" },
+              { src: "/WhatsApp Image 2025-07-17 at 13.04.41.jpeg", alt: "Momento Especial 5" },
+              { src: "/WhatsApp Image 2025-07-17 at 13.04.41 (1).jpeg", alt: "Momento Especial 6" },
             ]}
           />
         </div>
@@ -149,36 +153,13 @@ export default function ChurchLandingPage() {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto">
+          <div className="max-w-2xl mx-auto">
             <ContactForm />
 
             {/* Informações de contato compactas */}
-            <div className="mt-8 text-center space-y-3">
-              <div className="flex items-center justify-center space-x-2 text-cinza">
-                <Phone className="w-4 h-4 text-mostarda" />
-                <span className="text-sm font-inter">(11) 99999-9999</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2 text-cinza">
-                <Mail className="w-4 h-4 text-mostarda" />
-                <span className="text-sm font-inter">contato@igrejaesperanca.com</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2 text-cinza">
-                <MapPin className="w-4 h-4 text-mostarda" />
-                <span className="text-sm font-inter">Rua da Esperança, 123 - São Paulo, SP</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
-
-      {/* Footer Simples */}
-      <footer className="bg-cinza text-branco py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-branco/80">
-            &copy; {new Date().getFullYear()} Igreja Esperança. Todos os direitos reservados.
-          </p>
-        </div>
-      </footer>
     </div>
   )
 }
