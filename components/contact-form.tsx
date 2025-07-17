@@ -1,21 +1,33 @@
 "use client"
 
+import emailjs from 'emailjs-com'
+import { useRef, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { sendContactEmail } from "@/actions/contact"
 import { Mail, User, Phone, MessageCircle, Tag, CheckCircle2, XCircle } from "lucide-react"
-import { useFormState } from "react-dom"
 
 export function ContactForm() {
-  const initialState = { success: false, message: "" }
-  const formAction = async (_prevState: typeof initialState, formData: FormData) => {
-    return await sendContactEmail(formData)
+  const formRef = useRef<HTMLFormElement>(null)
+  const [status, setStatus] = useState<{ success: boolean, message: string } | null>(null)
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!formRef.current) return
+    emailjs.sendForm(
+      'SEU_SERVICE_ID', // substitua pelo seu Service ID
+      'SEU_TEMPLATE_ID', // substitua pelo seu Template ID
+      formRef.current,
+      'SEU_PUBLIC_KEY' // substitua pelo seu Public Key
+    ).then(
+      () => setStatus({ success: true, message: 'Mensagem enviada com sucesso!' }),
+      () => setStatus({ success: false, message: 'Erro ao enviar mensagem.' })
+    )
   }
-  const [state, dispatch] = useFormState(formAction, initialState)
+
   return (
     <div>
-      <form action={dispatch} className="space-y-6">
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="relative">
             <label htmlFor="name" className="block text-sm font-medium text-bordo mb-1 font-inter">
@@ -105,16 +117,14 @@ export function ContactForm() {
           Enviar Mensagem
         </Button>
       </form>
-
-    
-      {state && (
+      {status && (
         <div
           className={`mt-6 p-4 rounded-xl flex items-center justify-center gap-2 text-center text-sm font-inter shadow-md border
-            ${state.success ? "bg-green-50 text-green-800 border-green-200" : "bg-red-50 text-red-800 border-red-200"}
+            ${status.success ? "bg-green-50 text-green-800 border-green-200" : "bg-red-50 text-red-800 border-red-200"}
           `}
         >
-          {state.success ? <CheckCircle2 className="w-5 h-5 text-green-600" /> : <XCircle className="w-5 h-5 text-red-600" />}
-          {state.message}
+          {status.success ? <CheckCircle2 className="w-5 h-5 text-green-600" /> : <XCircle className="w-5 h-5 text-red-600" />}
+          {status.message}
         </div>
       )}
     </div>
