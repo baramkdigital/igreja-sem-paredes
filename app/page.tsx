@@ -134,10 +134,11 @@ export default function ChurchLandingPage() {
 
           <div className="max-w-2xl mx-auto">
             <ContactForm />
-            <PixDonation />
           </div>
         </div>
       </section>
+      {/* Nova seção: Doação via Pix */}
+      <PixDonation />
     </div>
   )
 }
