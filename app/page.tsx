@@ -47,7 +47,7 @@ export default function ChurchLandingPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
             <p className="text-cinza mb-6 leading-relaxed text-lg">
-                A Agência Missionária "Igreja Sem Paredes" nasceu do coração do Pr. Sérgio Santos, que há mais de 50 anos tem vivido e pregado o Evangelho.
+                A Agência Missionária "Igreja Além das Paredes" nasceu do coração do Pr. Sérgio Santos, que há mais de 50 anos tem vivido e pregado o Evangelho.
 
               </p>
               <p className="text-cinza mb-6 leading-relaxed text-lg">
@@ -70,7 +70,7 @@ export default function ChurchLandingPage() {
                 Se você não pode ir, você pode enviar. E se pode, oferte nessa obra e nos ajude a chegar ainda mais longe.
               </p>
               <p className="text-cinza leading-relaxed text-lg">
-                Somos uma Igreja sem Paredes. Nosso púlpito é a estrada.
+                Somos a Igreja Além das Paredes. Nosso púlpito é a estrada.
               </p>
             </div>
             <div className="h-full flex items-stretch">
@@ -92,9 +92,6 @@ export default function ChurchLandingPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-bordo mb-6 font-poppins">Galeria de Fotos</h2>
             <div className="w-24 h-1 bg-mostarda mx-auto mb-6"></div>
-            <p className="text-xl text-cinza max-w-2xl mx-auto">
-              Veja alguns dos momentos especiais que vivemos juntos como família da fé
-            </p>
           </div>
 
           <Lightbox
@@ -121,13 +118,13 @@ export default function ChurchLandingPage() {
             </p>
             <div className="flex justify-center mt-4">
               <a
-                href="https://www.instagram.com/pr.sergio.santos?igsh=MWM4c2F4ejVndjJ4NQ=="
+                href="https://www.instagram.com/igrejaalemdasparedes?igsh=MTJocnAxYm94Z3A1ZQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-bordo hover:text-mostarda transition-colors text-lg font-semibold"
               >
                 <Instagram className="w-6 h-6" />
-                @pr.sergio.santos
+                @igrejaalemdasparedes
               </a>
             </div>
           </div>
