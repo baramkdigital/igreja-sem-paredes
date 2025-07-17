@@ -15,10 +15,10 @@ export function ContactForm() {
     e.preventDefault()
     if (!formRef.current) return
     emailjs.sendForm(
-      'SEU_SERVICE_ID', // substitua pelo seu Service ID
-      'SEU_TEMPLATE_ID', // substitua pelo seu Template ID
+      'service_i994lih', // substitua pelo seu Service ID
+      'template_mcxj7ht', // substitua pelo seu Template ID
       formRef.current,
-      'SEU_PUBLIC_KEY' // substitua pelo seu Public Key
+      'YkZIt9aI6bXezfmc7' // substitua pelo seu Public Key
     ).then(
       () => setStatus({ success: true, message: 'Mensagem enviada com sucesso!' }),
       () => setStatus({ success: false, message: 'Erro ao enviar mensagem.' })
