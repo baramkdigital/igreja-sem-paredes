@@ -1,44 +1,55 @@
 "use client"
-
 import Image from "next/image"
+import { useState } from "react"
+import { Copy } from "lucide-react"
 
 export function PixDonation() {
+  const [copied, setCopied] = useState(false)
+  const pixKey = "missaoonibus@gmail.com"
+
+  function handleCopy() {
+    navigator.clipboard.writeText(pixKey)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
-    <div className="mt-16 flex flex-col items-center bg-bordo/95 rounded-3xl p-10 shadow-2xl border-4 border-mostarda">
-      <h3 className="text-3xl md:text-4xl font-bold text-branco mb-2 font-poppins text-center drop-shadow-lg">
-        Seja um mantenedor desta missão
-      </h3>
-      <p className="text-lg md:text-xl text-mostarda mb-6 text-center font-medium">
-        Sua doação nos ajuda a levar esperança e transformar vidas!
-      </p>
-      <div className="mb-6 flex flex-col items-center">
+    <section className="w-full py-16 flex justify-center bg-mostarda/10">
+      <div className="w-full max-w-xl flex flex-col items-center px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-bordo mb-2 text-center">
+          Transforme vidas com sua doação
+        </h2>
+        <p className="text-lg text-cinza mb-8 text-center max-w-lg">
+          Sua generosidade nos ajuda a levar esperança e amor a quem mais precisa.
+        </p>
         <Image
           src="/pix.jpeg"
           alt="QR Code Pix para doações"
-          width={240}
-          height={240}
-          className="rounded-2xl border-4 border-mostarda shadow-xl bg-white"
+          width={220}
+          height={220}
+          className="rounded-xl bg-white shadow-lg mb-6"
         />
+        <div className="flex flex-col items-center gap-2 mb-4">
+          <span className="text-base text-bordo font-semibold">Chave Pix</span>
+          <div className="flex items-center gap-2">
+            <span className="font-mono text-cinza bg-white px-3 py-1 rounded select-all border border-mostarda/40">
+              {pixKey}
+            </span>
+            <button
+              type="button"
+              onClick={handleCopy}
+              className={`flex items-center gap-1 px-3 py-1 rounded transition font-semibold border border-mostarda/40 text-bordo bg-mostarda/30 hover:bg-mostarda hover:text-branco ${copied ? 'bg-bordo text-branco' : ''}`}
+              title="Copiar chave Pix"
+            >
+              <Copy className="w-4 h-4" />
+              {copied ? "Copiado!" : "Copiar"}
+            </button>
+          </div>
+        </div>
+        <p className="text-cinza/80 text-base mt-2 text-center">
+          Cada oferta nos leva mais longe. <span className="text-mostarda font-semibold">Obrigado por semear conosco!</span>
+        </p>
       </div>
-      <div className="flex flex-col items-center mb-4">
-        <span className="inline-flex items-center gap-2 text-lg md:text-xl font-semibold text-mostarda mb-1">
-          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="12" fill="#d4a017"/><path d="M13.5 20C13.5 16.4101 16.4101 13.5 20 13.5C23.5899 13.5 26.5 16.4101 26.5 20C26.5 23.5899 23.5899 26.5 20 26.5C16.4101 26.5 13.5 23.5899 13.5 20Z" stroke="#601b1a" strokeWidth="2"/></svg>
-          Chave Pix
-        </span>
-        <span className="block text-xl md:text-2xl font-mono text-branco bg-bordo/80 px-4 py-2 rounded-lg select-all tracking-wide shadow-inner border border-mostarda mb-2">
-          missaoonibus@gmail.com
-        </span>
-        <button
-          type="button"
-          className="text-sm text-mostarda bg-branco/10 px-3 py-1 rounded hover:bg-mostarda hover:text-bordo border border-mostarda transition font-semibold"
-          onClick={() => {navigator.clipboard.writeText('missaoonibus@gmail.com')}}
-        >
-          Copiar chave
-        </button>
-      </div>
-      <p className="text-branco/80 text-center text-base mt-2">
-        Toda oferta é um passo a mais para alcançarmos novas vidas. <span className="font-semibold text-mostarda">Obrigado por semear conosco!</span>
-      </p>
-    </div>
+    </section>
   )
 } 
